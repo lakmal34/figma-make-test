@@ -13,7 +13,7 @@ export function Button({
 
   const styles = {
     primary: {
-      background: isHovered ? "#000000" : "#111827",
+      background: isHovered ? "#004aba" : "#004aba",
       color: "white",
     },
 
