@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { theme } from "../theme";
 
 type ButtonProps = {
   variant?: "primary" | "secondary" | "ghost";
@@ -13,18 +14,24 @@ export function Button({
 
   const styles = {
     primary: {
-      background: isHovered ? "#004aba" : "#004aba",
-      color: "white",
+      background: isHovered
+        ? theme.colors.primaryHover
+        : theme.colors.primary,
+      color: theme.colors.white,
     },
 
     secondary: {
-      background: isHovered ? "#D1D5DB" : "#E5E7EB",
-      color: "#111827",
+      background: isHovered
+        ? theme.colors.secondaryHover
+        : theme.colors.secondary,
+      color: theme.colors.text,
     },
 
     ghost: {
-      background: isHovered ? "#F3F4F6" : "transparent",
-      color: "#111827",
+      background: isHovered
+        ? "#F3F4F6"
+        : "transparent",
+      color: theme.colors.text,
     },
   };
 
